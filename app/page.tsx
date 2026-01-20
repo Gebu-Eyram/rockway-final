@@ -9,16 +9,17 @@ import React from "react";
 import AboutSection from "@/components/Home/AboutSection";
 import ClientSupport from "@/components/Home/Services";
 import FAQ from "@/components/Home/FAQ";
+import Certifications from "@/components/Home/Certifications";
 
 const Home = () => {
   return (
     <div>
       <HeroSection />
       <LogoCloud />
-      {/* <AboutSection /> */}
       <ClientSupport />
       <HSE />
       <Testimonials />
+      <Certifications />
       <Map />
       <FAQ />
     </div>
