@@ -15,7 +15,7 @@ const Header = () => {
   const pathName = usePathname();
   return (
     <header className="fixed top-0 inter left-0 right-0 z-50  bg-white">
-      <div className="max-w-7xl mx-auto flex h-18 items-center justify-between">
+      <div className="max-w-7xl mx-auto flex h-18 px-4 items-center justify-between">
         {/* Logo */}
         <div className="flex items-center gap-2">
           <div className="">
@@ -44,7 +44,7 @@ const Header = () => {
 
         {/* Contact Button */}
         <Button className="bg-foreground text-background py-4  rounded-full text-sm hover:bg-gray-800">
-          Contact Us
+          Get a Quote
         </Button>
       </div>
     </header>
