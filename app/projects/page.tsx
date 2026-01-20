@@ -9,7 +9,7 @@ const Projects = () => {
     <div className="w-full max-w-7xl mx-auto ">
       {projects.map((project, id) => {
         const contentCard = (
-          <div className="bg-muted/20 flex flex-col items-start justify-center rounded-3xl p-6">
+          <div className="bg-muted/20 flex flex-col items-start justify-center rounded-3xl p-6 order-1">
             <Image
               src={project.companyUrl}
               alt={project.title}
@@ -33,7 +33,7 @@ const Projects = () => {
         );
 
         const imageCard = (
-          <div className="h-140 bg-muted rounded-3xl relative overflow-hidden">
+          <div className="h-140 bg-muted rounded-3xl relative overflow-hidden order-2">
             <div
               className="absolute inset-0 bg-cover bg-center bg-no-repeat"
               style={{
@@ -46,7 +46,7 @@ const Projects = () => {
         return (
           <div
             key={id}
-            className="w-full inter mx-auto py-8 px-4 max-w-7xl grid lg:grid-cols-2 gap-6"
+            className="w-full inter mx-auto x-8 px-4 max-w-7xl grid lg:grid-cols-2 gap-6"
           >
             {id % 2 === 0 ? (
               <>
