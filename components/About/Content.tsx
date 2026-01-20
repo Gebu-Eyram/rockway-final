@@ -21,7 +21,7 @@ import Image from "next/image";
 export default function ContentSection() {
   return (
     <section>
-      <div className="bg-muted/50 py-8 lg:py-24">
+      <div className=" py-8 lg:pt-24">
         <div className="mx-auto w-full max-w-7xl px-4">
           <div className="flex max-md:flex-col items-center gap-4">
             <BlurFade delay={0.2}>
@@ -98,7 +98,7 @@ export default function ContentSection() {
             </div>
           </BlurFade>
 
-          <BlurFade delay={0.8}>
+          {/* <BlurFade delay={0.8}>
             <div className="mx-auto my-8 max-w-6xl">
               <Accordion
                 type="single"
@@ -182,9 +182,9 @@ export default function ContentSection() {
                 </div>
               </Accordion>
             </div>
-          </BlurFade>
+          </BlurFade> */}
 
-          <BlurFade delay={1.0}>
+          {/* <BlurFade delay={1.0}>
             <div>
               <p className="mt-2 text-3xl font-semibold tracking-tighter text-balance text-gray-900 md:text-4xl">
                 Our core principles
@@ -258,7 +258,7 @@ export default function ContentSection() {
                 </div>
               </Accordion>
             </div>
-          </BlurFade>
+          </BlurFade> */}
 
           {/* <div className="border-foreground/5 space-y-6 [--color-border:color-mix(in_oklab,var(--color-foreground)10%,transparent)] sm:space-y-0 sm:divide-y">
             <div className="grid sm:grid-cols-5">
