@@ -4,37 +4,37 @@ const members = [
   {
     name: "Liam Brown",
     role: "Founder - CEO",
-    avatar: "https://alt.tailus.io/images/team/member-one.webp",
+    avatar: "/engineer.webp",
     link: "#",
   },
   {
     name: "Elijah Jones",
     role: "Co-Founder - CTO",
-    avatar: "https://alt.tailus.io/images/team/member-two.webp",
+    avatar: "/engineer.webp",
     link: "#",
   },
   {
     name: "Isabella Garcia",
     role: "Sales Manager",
-    avatar: "https://alt.tailus.io/images/team/member-three.webp",
+    avatar: "/engineer.webp",
     link: "#",
   },
   {
     name: "Henry Lee",
     role: "UX Engeneer",
-    avatar: "https://alt.tailus.io/images/team/member-four.webp",
+    avatar: "/engineer.webp",
     link: "#",
   },
   {
     name: "Ava Williams",
     role: "Interaction Designer",
-    avatar: "https://alt.tailus.io/images/team/member-five.webp",
+    avatar: "/engineer.webp",
     link: "#",
   },
   {
     name: "Olivia Miller",
     role: "Visual Designer",
-    avatar: "https://alt.tailus.io/images/team/member-six.webp",
+    avatar: "/engineer.webp",
     link: "#",
   },
 ];
