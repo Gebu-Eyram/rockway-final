@@ -21,20 +21,20 @@ import Image from "next/image";
 export default function ContentSection() {
   return (
     <section>
-      <div className="bg-muted/50 py-24">
-        <div className="mx-auto w-full max-w-5xl px-6">
-          <div className="flex max-md:flex-col items-center gap-8">
+      <div className="bg-muted/50 py-8 lg:py-24">
+        <div className="mx-auto w-full max-w-7xl px-4">
+          <div className="flex max-md:flex-col items-center gap-4">
             <BlurFade delay={0.2}>
-              <p className="mt-2 text-3xl font-semibold tracking-tighter text-balance text-gray-900 md:text-4xl">
-                Ensuring Excellence in Oilfield Services
-              </p>
+              <h2 className="text-3xl font-semibold   tracking-tighter text-balance text-gray-900 md:text-4xl max-w-2xl ">
+                Rockway Oilfield Services - Excellence in Oilfield Solutions
+              </h2>
             </BlurFade>
             <BlurFade delay={0.4}>
               <div>
-                <p>
-                  Rockway is committed to delivering top-tier oilfield services
-                  with a focus on safety, efficiency, and environmental
-                  stewardship.
+                <p className="max-w-xl">
+                  Rockway Oilfield Services Ltd. is committed to delivering
+                  top-tier oilfield services with a focus on safety, efficiency,
+                  and environmental stewardship.
                 </p>
                 <div className="mt-4">
                   <Button variant="outline" className="mr-2 ">
@@ -49,13 +49,53 @@ export default function ContentSection() {
           </div>
 
           <BlurFade delay={0.6}>
-            <Image
-              src="/company.jpg"
-              alt="About Us Illustration"
-              width={1200}
-              height={800}
-              className="mt-12 w-full min-h-108 rounded-2xl border"
-            />
+            <div className="w-full h-[500px] border my-12 relative rounded-2xl overflow-hidden">
+              <Image
+                src="/hero-3.jpg"
+                alt="About Us Illustration"
+                fill
+                className="w-full absolute object-cover"
+              />
+              {/* Stats Card Overlay */}
+              <div className="absolute bottom-8 left-8 right-8">
+                <div className="bg-white/80 backdrop-blur rounded-4xl shadow-lg p-6 md:p-8">
+                  <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8">
+                    <div>
+                      <div className="text-4xl md:text-5xl  mb-2 text-gray-900">
+                        15+
+                      </div>
+                      <div className="text-sm md:text-base text-gray-600">
+                        Years of Excellence
+                      </div>
+                    </div>
+                    <div>
+                      <div className="text-4xl md:text-5xl  mb-2 text-gray-900">
+                        500+
+                      </div>
+                      <div className="text-sm md:text-base text-gray-600">
+                        Projects Completed
+                      </div>
+                    </div>
+                    <div>
+                      <div className="text-4xl md:text-5xl  mb-2 text-gray-900">
+                        98%
+                      </div>
+                      <div className="text-sm md:text-base text-gray-600">
+                        Client Satisfaction
+                      </div>
+                    </div>
+                    <div>
+                      <div className="text-4xl md:text-5xl  mb-2 text-gray-900">
+                        3
+                      </div>
+                      <div className="text-sm md:text-base text-gray-600">
+                        Countries Served
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </BlurFade>
 
           <BlurFade delay={0.8}>

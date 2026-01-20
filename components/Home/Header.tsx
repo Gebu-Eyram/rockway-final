@@ -4,7 +4,8 @@ import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
-import { Menu } from "lucide-react";
+import { ChevronRight, Menu } from "lucide-react";
+import Link from "next/link";
 
 const Header = () => {
   const navLinks = [
@@ -61,18 +62,22 @@ const Header = () => {
           </SheetTrigger>
           <SheetContent
             side="right"
-            className="w-[300px] sm:w-[400px] flex flex-col"
+            className="w-75 sm:w-100 p-4 flex flex-col"
           >
             <nav className="flex flex-col gap-6 mt-8">
               {navLinks.map((link) => (
-                <a
+                <Link
                   key={link.name}
                   href={link.href}
                   onClick={() => setIsOpen(false)}
-                  className={`text-lg ${pathName === link.href ? "text-foreground font-semibold" : "text-muted-foreground"} hover:text-foreground transition-colors`}
+                  className={` pb-2 flex justify-between items-center font-sans border-b ${pathName === link.href ? "text-foreground font-semibold" : "text-muted-foreground"} hover:text-foreground transition-colors`}
                 >
                   {link.name}
-                </a>
+
+                  <div className="p-2 border rounded-full">
+                    <ChevronRight className="h-4 w-4 " />
+                  </div>
+                </Link>
               ))}
             </nav>
             <div className="mt-auto pb-8 px-2">
