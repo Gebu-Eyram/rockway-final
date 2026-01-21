@@ -186,10 +186,10 @@ const SustainabilityPage = () => {
         </div>
       </div>
 
-      {/* Environmental Initiatives Section */}
+      {/* Environmental Initiatives Section - Double Layout */}
       <div className="mb-20">
         <BlurFade delay={0.1} inView>
-          <div className="mb-8">
+          <div className="mb-12">
             <h2 className="text-2xl font-semibold mb-3 tracking-tight text-gray-900">
               Taking Action
             </h2>
@@ -199,26 +199,104 @@ const SustainabilityPage = () => {
           </div>
         </BlurFade>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          {initiatives.map((initiative, index) => (
-            <BlurFade key={index} delay={0.2 + index * 0.1} inView>
-              <div
-                className={`${initiative.color} border rounded-2xl p-6 hover:shadow-lg transition-shadow`}
-              >
-                <div
-                  className={`w-12 h-12 ${initiative.iconColor} bg-white rounded-xl flex items-center justify-center mb-4`}
-                >
-                  <initiative.icon className="w-6 h-6" />
-                </div>
-                <h4 className="text-xl font-semibold mb-3 text-gray-900">
-                  {initiative.title}
-                </h4>
-                <p className="text-gray-700 text-sm leading-relaxed">
-                  {initiative.description}
+        <div className="grid gap-12 lg:gap-16">
+          {/* Row 1: Renewable Energy & Waste Management */}
+          <div className="grid gap-6 lg:grid-cols-2">
+            <BlurFade delay={0.2} inView>
+              <div>
+                <p className="text-sky-600 font-medium mb-6 uppercase text-sm">
+                  Clean Energy
                 </p>
+                <h2 className="text-3xl font-semibold mb-6 tracking-tighter text-balance text-gray-900 md:text-4xl max-w-2xl">
+                  Renewable Energy Integration
+                </h2>
+                <p className="mb-6 text-gray-600 leading-relaxed">
+                  Exploring solar and renewable energy solutions to reduce our
+                  carbon footprint and support Ghana's clean energy transition.
+                </p>
+                <div className="relative h-80 w-full rounded-xl overflow-hidden shadow-lg">
+                  <Image
+                    src="/actions/1.jpg"
+                    alt="Renewable Energy Integration"
+                    fill
+                    className="object-cover"
+                  />
+                </div>
               </div>
             </BlurFade>
-          ))}
+
+            <BlurFade delay={0.3} inView>
+              <div>
+                <p className="text-sky-600 font-medium mb-6 uppercase text-sm">
+                  Waste Reduction
+                </p>
+                <h2 className="text-3xl font-semibold mb-6 tracking-tighter text-balance text-gray-900 md:text-4xl max-w-2xl">
+                  Waste Management
+                </h2>
+                <p className="mb-6 text-gray-600 leading-relaxed">
+                  Comprehensive waste reduction, recycling, and responsible
+                  disposal programs across all operations.
+                </p>
+                <div className="relative h-80 w-full rounded-xl overflow-hidden shadow-lg">
+                  <Image
+                    src="/actions/2.webp"
+                    alt="Waste Management"
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+              </div>
+            </BlurFade>
+          </div>
+
+          {/* Row 2: Water Stewardship & Environmental Conservation */}
+          <div className="grid gap-6 lg:grid-cols-2">
+            <BlurFade delay={0.4} inView>
+              <div>
+                <p className="text-sky-600 font-medium mb-6 uppercase text-sm">
+                  Water Conservation
+                </p>
+                <h2 className="text-3xl font-semibold mb-6 tracking-tighter text-balance text-gray-900 md:text-4xl max-w-2xl">
+                  Water Stewardship
+                </h2>
+                <p className="mb-6 text-gray-600 leading-relaxed">
+                  Efficient water use practices and protection of water
+                  resources in areas where we operate.
+                </p>
+                <div className="relative h-80 w-full rounded-xl overflow-hidden shadow-lg">
+                  <Image
+                    src="/actions/3.jpg"
+                    alt="Water Stewardship"
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+              </div>
+            </BlurFade>
+
+            <BlurFade delay={0.5} inView>
+              <div>
+                <p className="text-sky-600 font-medium mb-6 uppercase text-sm">
+                  Nature Protection
+                </p>
+                <h2 className="text-3xl font-semibold mb-6 tracking-tighter text-balance text-gray-900 md:text-4xl max-w-2xl">
+                  Environmental Conservation
+                </h2>
+                <p className="mb-6 text-gray-600 leading-relaxed">
+                  Supporting reforestation projects and habitat preservation in
+                  local communities.
+                </p>
+                <div className="relative h-80 w-full rounded-xl overflow-hidden shadow-lg">
+                  <Image
+                    src="/actions/4.jpeg"
+                    alt="Environmental Conservation"
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+              </div>
+            </BlurFade>
+          </div>
         </div>
       </div>
 
