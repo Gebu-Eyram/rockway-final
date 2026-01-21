@@ -1,13 +1,14 @@
-import React from "react";
+import React, { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Play } from "lucide-react";
 import { BlogPosts } from "@/constants";
 import Image from "next/image";
 import Link from "next/link";
 import { BlurFade } from "@/components/ui/blur-fade";
-import { HeroVideoDialog } from "@/components/ui/hero-video-dialog";
+import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
 
 const HeroSection = () => {
+  const [isVideoOpen, setIsVideoOpen] = useState(false);
   return (
     <div className="p-2">
       <section className="relative rounded-3xl font-sans h-[calc(100vh-6rem)] w-full overflow-hidden">
@@ -46,17 +47,30 @@ const HeroSection = () => {
                     Explore Now
                     <ArrowRight className="w-5 h-5" />
                   </Button>
-                  <HeroVideoDialog videoSrc="https://www.youtube.com/embed/XbBLagPXWNk">
-                    <Button
-                      variant="outline"
-                      className="bg-transparent border-2 border-white text-white hover:bg-white/10 rounded-full px-6 py-6 text-base flex items-center gap-2"
-                    >
-                      <div className="w-6 h-6 bg-white rounded-full flex items-center justify-center">
-                        <Play className="w-3 h-3 text-black fill-black ml-0.5" />
+                  <Dialog open={isVideoOpen} onOpenChange={setIsVideoOpen}>
+                    <DialogTrigger>
+                      <Button
+                        variant="outline"
+                        className="bg-transparent border-2 border-white text-white hover:bg-white/10 rounded-full px-6 py-6 text-base flex items-center gap-2"
+                      >
+                        <div className="w-6 h-6 bg-white rounded-full flex items-center justify-center">
+                          <Play className="w-3 h-3 text-black fill-black ml-0.5" />
+                        </div>
+                        Play Video
+                      </Button>
+                    </DialogTrigger>
+                    <DialogContent className="w-full max-w-4xl p-0 border-0">
+                      <div className="aspect-video w-full">
+                        <iframe
+                          src="https://www.youtube.com/embed/XbBLagPXWNk"
+                          title="Hero Video player"
+                          className="w-full h-full rounded-lg"
+                          allowFullScreen
+                          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        ></iframe>
                       </div>
-                      Play Video
-                    </Button>
-                  </HeroVideoDialog>
+                    </DialogContent>
+                  </Dialog>
                 </div>
               </BlurFade>
             </div>
