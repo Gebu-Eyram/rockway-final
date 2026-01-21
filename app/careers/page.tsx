@@ -3,6 +3,7 @@
 import React, { useState } from "react";
 import Link from "next/link";
 import { JobOpenings } from "@/constants";
+import { BlurFade } from "@/components/ui/blur-fade";
 
 const CareersPage = () => {
   const [selectedDepartment, setSelectedDepartment] = useState("All");
@@ -26,27 +27,30 @@ const CareersPage = () => {
   return (
     <div className="max-w-7xl mx-auto p-4 py-8 lg:py-20">
       {/* Hero Section */}
-      <div className="mb-12 relative">
-        <div className="absolute top-0 left-0 w-32 h-32 bg-gradient-to-br from-pink-200 via-purple-100 to-transparent rounded-full blur-3xl opacity-60"></div>
-        <div className="absolute top-10 right-0 w-48 h-48 bg-gradient-to-bl from-pink-100 via-purple-50 to-transparent rounded-full blur-3xl opacity-50"></div>
+      <BlurFade delay={0.1}>
+        <div className="mb-12 relative">
+          <div className="absolute top-0 left-0 w-32 h-32 bg-gradient-to-br from-pink-200 via-purple-100 to-transparent rounded-full blur-3xl opacity-60"></div>
+          <div className="absolute top-10 right-0 w-48 h-48 bg-gradient-to-bl from-pink-100 via-purple-50 to-transparent rounded-full blur-3xl opacity-50"></div>
 
-        <div className="relative">
-          <span className="inline-block px-4 py-2 text-sm border border-gray-300 rounded-full mb-6">
-            We&apos;re hiring!
-          </span>
-          <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6 tracking-tight">
-            Be part of our mission
-          </h1>
-          <p className="text-lg text-gray-600 max-w-2xl">
-            We&apos;re looking for passionate people to join us on our mission.
-            We value flat hierarchies, clear communication, and full ownership
-            and responsibility.
-          </p>
+          <div className="relative">
+            <span className="inline-block px-4 py-2 text-sm border border-gray-300 rounded-full mb-6">
+              We&apos;re hiring!
+            </span>
+            <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6 tracking-tight">
+              Be part of our mission
+            </h1>
+            <p className="text-lg text-gray-600 max-w-2xl">
+              We&apos;re looking for passionate people to join us on our mission.
+              We value flat hierarchies, clear communication, and full ownership
+              and responsibility.
+            </p>
+          </div>
         </div>
-      </div>
+      </BlurFade>
 
       {/* Department Filters */}
-      <div className="mb-8 flex flex-wrap gap-3">
+      <BlurFade delay={0.2}>
+        <div className="mb-8 flex flex-wrap gap-3">
         {departments.map((dept) => (
           <button
             key={dept}
@@ -60,15 +64,14 @@ const CareersPage = () => {
             {dept === "All" ? "View all" : dept}
           </button>
         ))}
-      </div>
+        </div>
+      </BlurFade>
 
       {/* Job Listings */}
       <div className="space-y-6">
         {filteredJobs.map((job, index) => (
-          <div
-            key={index}
-            className="flex items-center justify-between p-6 border-b border-gray-200 hover:bg-gray-50 transition-colors"
-          >
+          <BlurFade key={index} delay={0.3 + index * 0.05} inView>
+            <div className="flex items-center justify-between p-6 border-b border-gray-200 hover:bg-gray-50 transition-colors">
             <div className="flex-1">
               <h3 className="text-xl font-semibold text-gray-900 mb-2">
                 {job.title}
@@ -136,7 +139,8 @@ const CareersPage = () => {
                 />
               </svg>
             </Link>
-          </div>
+            </div>
+          </BlurFade>
         ))}
       </div>
 

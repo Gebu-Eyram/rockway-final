@@ -3,6 +3,7 @@ import { CheckCircle2Icon } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
+import { BlurFade } from "@/components/ui/blur-fade";
 
 const Projects = () => {
   return (
@@ -44,22 +45,21 @@ const Projects = () => {
         );
 
         return (
-          <div
-            key={id}
-            className="w-full inter mx-auto py-8 px-4 max-w-7xl grid lg:grid-cols-2 gap-6"
-          >
-            {id % 2 === 0 ? (
-              <>
-                {contentCard}
-                {imageCard}
-              </>
-            ) : (
-              <>
-                {imageCard}
-                {contentCard}
-              </>
-            )}
-          </div>
+          <BlurFade key={id} delay={0.2 + id * 0.15} inView>
+            <div className="w-full inter mx-auto py-8 px-4 max-w-7xl grid lg:grid-cols-2 gap-6">
+              {id % 2 === 0 ? (
+                <>
+                  {contentCard}
+                  {imageCard}
+                </>
+              ) : (
+                <>
+                  {imageCard}
+                  {contentCard}
+                </>
+              )}
+            </div>
+          </BlurFade>
         );
       })}
     </div>

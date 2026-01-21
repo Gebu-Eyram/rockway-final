@@ -2,19 +2,23 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { BlogPosts } from "@/constants";
+import { BlurFade } from "@/components/ui/blur-fade";
 
 const BlogPage = () => {
   return (
     <div className="max-w-7xl mx-auto p-4 py-8 lg:py-20 inter">
-      <div>
-        <h2 className="text-3xl font-semibold mb-6 tracking-tighter text-balance text-gray-900 md:text-4xl max-w-2xl">
-          Latest Stories
-        </h2>
-      </div>
+      <BlurFade delay={0.1}>
+        <div>
+          <h2 className="text-3xl font-semibold mb-6 tracking-tighter text-balance text-gray-900 md:text-4xl max-w-2xl">
+            Latest Stories
+          </h2>
+        </div>
+      </BlurFade>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {BlogPosts.map((post, index) => (
-          <Link key={index} href={post.link}>
+          <BlurFade key={index} delay={0.2 + index * 0.1} inView>
+            <Link href={post.link}>
             <div className="w-full bg-gray-100 rounded-2xl cursor-pointer p-2">
               <div className="mb-4 p-4">
                 <time className="text-xs text-gray-500 block mb-2">
@@ -40,7 +44,8 @@ const BlogPage = () => {
                 />
               </div>
             </div>
-          </Link>
+            </Link>
+          </BlurFade>
         ))}
       </div>
     </div>
