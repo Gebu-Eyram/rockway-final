@@ -67,14 +67,19 @@ const HeroSection = () => {
                     <div>
                       <div className="flex items-center gap-2 mb-2">
                         <span className="text-white/60 text-xs">
-                          {new Date(BlogPosts[0].date).toLocaleDateString("en-US", {
-                            month: "short",
-                            day: "numeric",
-                            year: "numeric",
-                          })}
+                          {new Date(BlogPosts[0].date).toLocaleDateString(
+                            "en-US",
+                            {
+                              month: "short",
+                              day: "numeric",
+                              year: "numeric",
+                            },
+                          )}
                         </span>
                         <span className="text-white/40">•</span>
-                        <span className="text-white/60 text-xs">Latest Article</span>
+                        <span className="text-white/60 text-xs">
+                          Latest Article
+                        </span>
                       </div>
                       <h3 className="text-white font-semibold text-lg mb-2 line-clamp-2">
                         {BlogPosts[0].title}
@@ -83,7 +88,9 @@ const HeroSection = () => {
                         {BlogPosts[0].summary}
                       </p>
                       <div className="flex items-center gap-2 mt-4">
-                        <span className="text-white/80 text-sm font-medium">Read more</span>
+                        <span className="text-white/80 text-sm font-medium">
+                          Read more
+                        </span>
                         <div className="w-8 h-8 bg-white rounded-full flex items-center justify-center group-hover:translate-x-1 transition-transform">
                           <ArrowRight className="w-4 h-4 text-black" />
                         </div>
