@@ -1,6 +1,9 @@
 import React from "react";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Play } from "lucide-react";
+import { BlogPosts } from "@/constants";
+import Image from "next/image";
+import Link from "next/link";
 
 const HeroSection = () => {
   return (
@@ -48,32 +51,47 @@ const HeroSection = () => {
               </div>
             </div>
 
-            {/* Right Content - Product Card */}
+            {/* Right Content - Blog Card */}
             <div className="hidden lg:flex justify-end">
-              <div className="bg-white/10 backdrop-blur-md rounded-2xl p-6 max-w-sm border border-white/20">
-                <div className="flex items-start gap-4">
-                  <img
-                    src="https://images.unsplash.com/photo-1611348586804-61bf6c080437?q=80&w=400"
-                    alt="Oil and Gas Equipment"
-                    className="w-32 h-32 object-cover rounded-xl"
-                  />
-                  <div className="flex-1">
-                    <h3 className="text-white font-semibold text-lg mb-2">
-                      Sunroyal EdgeTech 500...
-                    </h3>
-                    <p className="text-white/70 text-sm">
-                      Our best selling product. Installed durability, efficiency
-                      & longevity
-                    </p>
-                    <div className="flex items-center gap-2 mt-3">
-                      <div className="w-8 h-8 bg-white rounded-full flex items-center justify-center">
-                        <ArrowRight className="w-4 h-4 text-black" />
+              <Link href={BlogPosts[0].link}>
+                <div className="bg-white/10 backdrop-blur-md rounded-2xl p-6 max-w-sm border border-white/20 hover:bg-white/15 transition-all cursor-pointer group">
+                  <div className="space-y-4">
+                    <div className="relative w-full h-48 rounded-xl overflow-hidden">
+                      <Image
+                        src={BlogPosts[0].image}
+                        alt={BlogPosts[0].title}
+                        fill
+                        className="object-cover group-hover:scale-105 transition-transform duration-300"
+                      />
+                    </div>
+                    <div>
+                      <div className="flex items-center gap-2 mb-2">
+                        <span className="text-white/60 text-xs">
+                          {new Date(BlogPosts[0].date).toLocaleDateString("en-US", {
+                            month: "short",
+                            day: "numeric",
+                            year: "numeric",
+                          })}
+                        </span>
+                        <span className="text-white/40">•</span>
+                        <span className="text-white/60 text-xs">Latest Article</span>
                       </div>
-                      <span className="text-white/60 text-xs">+3</span>
+                      <h3 className="text-white font-semibold text-lg mb-2 line-clamp-2">
+                        {BlogPosts[0].title}
+                      </h3>
+                      <p className="text-white/70 text-sm line-clamp-2">
+                        {BlogPosts[0].summary}
+                      </p>
+                      <div className="flex items-center gap-2 mt-4">
+                        <span className="text-white/80 text-sm font-medium">Read more</span>
+                        <div className="w-8 h-8 bg-white rounded-full flex items-center justify-center group-hover:translate-x-1 transition-transform">
+                          <ArrowRight className="w-4 h-4 text-black" />
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
+              </Link>
             </div>
           </div>
         </div>
