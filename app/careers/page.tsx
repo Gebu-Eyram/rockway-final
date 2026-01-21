@@ -25,7 +25,7 @@ const CareersPage = () => {
       : JobOpenings.filter((job) => job.department === selectedDepartment);
 
   return (
-    <div className="max-w-7xl mx-auto p-4 py-8 lg:py-20">
+    <div className="max-w-7xl mx-auto p-4 py-8 inter lg:py-20">
       {/* Hero Section */}
       <BlurFade delay={0.1}>
         <div className="mb-12 relative">
@@ -36,9 +36,9 @@ const CareersPage = () => {
             <span className="inline-block px-4 py-2 text-sm border border-gray-300 rounded-full mb-6">
               We&apos;re hiring!
             </span>
-            <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6 tracking-tight">
+            <h2 className="text-3xl font-semibold font-sans  mb-6 tracking-tighter text-balance text-gray-900 md:text-4xl max-w-2xl ">
               Be part of our mission
-            </h1>
+            </h2>
             <p className="text-lg text-gray-600 max-w-2xl">
               We&apos;re looking for passionate people to join us on our
               mission. We value flat hierarchies, clear communication, and full
