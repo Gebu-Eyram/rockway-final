@@ -42,11 +42,8 @@ const ContactPage = () => {
             transformative success.
           </p>
           <div className="flex gap-4 justify-center">
-            <button className="px-6 py-3 bg-blue-600 text-white rounded-lg font-medium hover:bg-blue-700 transition-colors">
+            <button className="px-6 py-3 bg-sky-600 text-white rounded-full font-medium hover:bg-sky-700 transition-colors">
               Get Started
-            </button>
-            <button className="px-6 py-3 border border-gray-300 text-gray-700 rounded-lg font-medium hover:bg-gray-50 transition-colors">
-              Free trial
             </button>
           </div>
         </div>
@@ -68,28 +65,38 @@ const ContactPage = () => {
               <div>
                 <p className="text-gray-500 mb-2">Email:</p>
                 <a
-                  href="mailto:Consulting@gmail.com"
+                  href="mailto:info@rockwayoilfields.com"
                   className="text-xl text-gray-900 hover:text-blue-600 transition-colors"
                 >
-                  Consulting@gmail.com
+                  info@rockwayoilfields.com
                 </a>
               </div>
 
               <div>
                 <p className="text-gray-500 mb-2">Phone:</p>
                 <a
-                  href="tel:+11234567890"
+                  href="tel:+233244748571"
                   className="text-xl text-gray-900 hover:text-blue-600 transition-colors"
                 >
-                  +1 (123) 456-7890
+                  (+233) 244748571
                 </a>
               </div>
 
               <div>
-                <p className="text-gray-500 mb-2">Office:</p>
-                <p className="text-xl text-gray-900">
-                  456 Business Ave, New York, NY 10001
-                </p>
+                <p className="text-gray-500 mb-2">Office Address:</p>
+                <div className="text-xl text-gray-900 space-y-1">
+                  <p>NO. 18 Noi Fetreke Street,</p>
+                  <p>Airport Residential Area,</p>
+                  <p>Accra – Ghana</p>
+                  <p>Ghana Post: GA-118-5893</p>
+                </div>
+              </div>
+              <div>
+                <p className="text-gray-500 mb-2">Mailing Address:</p>
+                <div className="text-xl text-gray-900 space-y-1">
+                  <p>P.O. Box KIA 16314</p>
+                  <p>Airport, Accra Ghana</p>
+                </div>
               </div>
 
               <div>
