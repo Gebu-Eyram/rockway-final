@@ -5,59 +5,41 @@ import { BlogPosts } from "@/constants";
 
 const BlogPage = () => {
   return (
-    <div className="max-w-7xl mx-auto py-8 lg:py-20 px-4">
-      <div className="mb-12">
+    <div className="max-w-7xl mx-auto p-4 py-8 lg:py-20 inter">
+      <div>
         <h2 className="text-3xl font-semibold mb-6 tracking-tighter text-balance text-gray-900 md:text-4xl max-w-2xl">
           Latest Stories
         </h2>
-        <p className="text-gray-600 text-lg max-w-3xl">
-          Stay updated with the latest insights, innovations, and industry
-          trends in oil and gas services.
-        </p>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {BlogPosts.map((post, index) => (
-          <Link key={index} href={post.link} className="group cursor-pointer">
-            <article className="bg-white rounded-2xl overflow-hidden border border-gray-200 hover:shadow-lg transition-shadow duration-300">
-              <div className="relative w-full h-64 bg-gray-200">
-                <Image
-                  src={post.image}
-                  alt={post.title}
-                  fill
-                  className="object-cover group-hover:scale-105 transition-transform duration-300"
-                />
-              </div>
-              <div className="p-6">
-                <time className="text-sm text-gray-500 mb-2 block">
+          <Link key={index} href={post.link}>
+            <div className="w-full bg-gray-100 rounded-2xl cursor-pointer p-2">
+              <div className="mb-4 p-4">
+                <time className="text-xs text-gray-500 block mb-2">
                   {new Date(post.date).toLocaleDateString("en-US", {
                     year: "numeric",
                     month: "long",
                     day: "numeric",
                   })}
                 </time>
-                <h3 className="text-xl font-semibold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
+                <p className="text-gray-700 capitalize tracking-tight font-sans leading-[104%] mt-4 text-lg font-medium line-clamp-1">
                   {post.title}
-                </h3>
-                <p className="text-gray-600 line-clamp-3">{post.summary}</p>
-                <div className="mt-4 flex items-center text-blue-600 font-medium">
-                  Read more
-                  <svg
-                    className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M9 5l7 7-7 7"
-                    />
-                  </svg>
-                </div>
+                </p>
+                <p className="line-clamp-2 text-gray-600 text-sm mt-3">
+                  {post.summary}
+                </p>
               </div>
-            </article>
+              <div className="bg-gray-100 rounded-2xl w-full h-80 overflow-hidden relative flex items-start justify-end">
+                <Image
+                  src={post.image}
+                  alt={post.title}
+                  fill
+                  className="h-full object-cover -bottom-[12%] left-0 absolute"
+                />
+              </div>
+            </div>
           </Link>
         ))}
       </div>

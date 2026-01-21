@@ -16,7 +16,7 @@ const BlogPost = () => {
   }
 
   return (
-    <article className="max-w-4xl mx-auto py-8 lg:py-20 px-4">
+    <article className="max-w-4xl inter mx-auto py-8 lg:py-20 px-4">
       {/* Back button */}
       <Link
         href="/blog"
