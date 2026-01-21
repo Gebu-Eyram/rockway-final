@@ -1,7 +1,15 @@
 import React from "react";
 import Image from "next/image";
 import { BlurFade } from "@/components/ui/blur-fade";
-import { Shield, Heart, Leaf, AlertTriangle, Award, FileText, Users } from "lucide-react";
+import {
+  Shield,
+  Heart,
+  Leaf,
+  AlertTriangle,
+  Award,
+  FileText,
+  Users,
+} from "lucide-react";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 
@@ -72,8 +80,8 @@ const HSEPage = () => {
                 Health, Safety & Environment
               </h1>
               <p className="text-lg md:text-xl text-gray-600">
-                Safety is not just a priority at Rockway—it's a core value embedded in
-                everything we do.
+                Safety is not just a priority at Rockway—it's a core value
+                embedded in everything we do.
               </p>
             </div>
           </BlurFade>
@@ -90,7 +98,9 @@ const HSEPage = () => {
                   <div className="text-4xl md:text-5xl font-bold text-gray-900 mb-2">
                     {stat.value}
                   </div>
-                  <div className="text-sm md:text-base text-gray-600">{stat.label}</div>
+                  <div className="text-sm md:text-base text-gray-600">
+                    {stat.label}
+                  </div>
                 </div>
               </BlurFade>
             ))}
@@ -115,8 +125,9 @@ const HSEPage = () => {
             <BlurFade delay={0.2} inView>
               <div className="mt-6 sm:mt-0">
                 <p className="text-gray-600">
-                  Our comprehensive HSE management system ensures the safety of our people,
-                  protection of the environment, and operational excellence.
+                  Our comprehensive HSE management system ensures the safety of
+                  our people, protection of the environment, and operational
+                  excellence.
                 </p>
               </div>
             </BlurFade>
@@ -158,7 +169,9 @@ const HSEPage = () => {
                     <h3 className="text-lg font-semibold text-gray-900 mb-3">
                       {program.title}
                     </h3>
-                    <p className="text-gray-600 text-sm">{program.description}</p>
+                    <p className="text-gray-600 text-sm">
+                      {program.description}
+                    </p>
                   </div>
                 </BlurFade>
               ))}
@@ -184,8 +197,9 @@ const HSEPage = () => {
             <BlurFade delay={0.2} inView>
               <div className="mt-6 sm:mt-0">
                 <p className="text-gray-600">
-                  Our dedicated safety team works tirelessly to maintain the highest standards
-                  of health, safety, and environmental protection across all operations.
+                  Our dedicated safety team works tirelessly to maintain the
+                  highest standards of health, safety, and environmental
+                  protection across all operations.
                 </p>
               </div>
             </BlurFade>
@@ -228,7 +242,7 @@ const HSEPage = () => {
           <span className="text-caption -ml-6 -mt-3.5 block w-max bg-white px-6">
             Certifications
           </span>
-          
+
           {/* Lines decoration */}
           <div className="pointer-events-none select-none absolute inset-0">
             <div className="absolute inset-y-0 left-0 w-px">
@@ -265,9 +279,9 @@ const HSEPage = () => {
                 Certified Excellence You Can Trust
               </p>
               <p className="text-center text-gray-600 text-base max-w-2xl mx-auto mb-8">
-                Our ISO certifications demonstrate our commitment to maintaining the
-                highest standards in quality, safety, and environmental management
-                across all operations.
+                Our ISO certifications demonstrate our commitment to maintaining
+                the highest standards in quality, safety, and environmental
+                management across all operations.
               </p>
             </BlurFade>
             <BlurFade delay={0.2} inView>
