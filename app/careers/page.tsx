@@ -39,7 +39,7 @@ const CareersPage = () => {
             <h2 className="text-3xl font-semibold font-sans  mb-6 tracking-tighter text-balance text-gray-900 md:text-4xl max-w-2xl ">
               Be part of our mission
             </h2>
-            <p className="text-lg text-gray-600 max-w-2xl">
+            <p className="text-lg font-sans text-gray-600 max-w-2xl">
               We&apos;re looking for passionate people to join us on our
               mission. We value flat hierarchies, clear communication, and full
               ownership and responsibility.
