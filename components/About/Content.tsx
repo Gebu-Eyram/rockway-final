@@ -17,6 +17,7 @@ import {
 } from "@/components/ui/accordion";
 import { BlurFade } from "@/components/ui/blur-fade";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function ContentSection() {
   return (
@@ -37,12 +38,16 @@ export default function ContentSection() {
                   and environmental stewardship.
                 </p>
                 <div className="mt-4">
-                  <Button variant="outline" className="mr-2 ">
-                    Learn More
-                  </Button>
-                  <Button className="bg-sky-700 hover:bg-sky-600">
-                    Contact Us
-                  </Button>
+                  <Link href="/about-us">
+                    <Button variant="outline" className="mr-2 ">
+                      Our services
+                    </Button>
+                  </Link>
+                  <Link href="/contact-us">
+                    <Button className="bg-sky-700 hover:bg-sky-600">
+                      Contact Us
+                    </Button>
+                  </Link>
                 </div>
               </div>
             </BlurFade>

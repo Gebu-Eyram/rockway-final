@@ -43,10 +43,12 @@ const HeroSection = () => {
               {/* Buttons */}
               <BlurFade delay={0.5} inView>
                 <div className="flex flex-wrap gap-4 pt-4">
-                  <Button className="bg-white text-black hover:bg-gray-100 rounded-full px-6 py-6 text-base flex items-center gap-2">
-                    Explore Now
-                    <ArrowRight className="w-5 h-5" />
-                  </Button>
+                  <Link href="/services">
+                    <Button className="bg-white text-black hover:bg-gray-100 rounded-full px-6 py-6 text-base flex items-center gap-2">
+                      Explore Now
+                      <ArrowRight className="w-5 h-5" />
+                    </Button>
+                  </Link>
                   <Dialog open={isVideoOpen} onOpenChange={setIsVideoOpen}>
                     <DialogTrigger>
                       <Button

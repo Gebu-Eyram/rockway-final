@@ -9,7 +9,7 @@ const HSE = () => {
         <h2 className="text-3xl font-semibold  mb-6 tracking-tighter text-balance text-gray-900 md:text-4xl inter">
           Delivering Excellence with Safety at Our Core
         </h2>
-        <Link href="/services" className="mb-6 ">
+        <Link href="/hse" className="mb-6 ">
           <button className="bg-sky-600 text-background py-4 px-6 rounded-full text-sm hover:bg-sky-800">
             Our HSE Commitment
           </button>

@@ -83,19 +83,18 @@ const HSEPage = () => {
                     excellence.
                   </p>
                   <div className="mt-4">
-                    <Button variant="outline" className="mr-2">
-                      HSE Policy
-                    </Button>
-                    <Button className="bg-sky-700 hover:bg-sky-600">
-                      Contact Us
-                    </Button>
+                    <Link href="/contact-us">
+                      <Button className="bg-sky-700 hover:bg-sky-600">
+                        Contact Us
+                      </Button>
+                    </Link>
                   </div>
                 </div>
               </BlurFade>
             </div>
 
             <BlurFade delay={0.6}>
-              <div className="w-full h-[500px] border my-12 relative rounded-2xl overflow-hidden">
+              <div className="w-full h-125 border my-12 relative rounded-2xl overflow-hidden">
                 <Image
                   src="/hse.jpg"
                   alt="Health Safety and Environment"
