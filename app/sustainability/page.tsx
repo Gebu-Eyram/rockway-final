@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import Image from "next/image";
 import { BlurFade } from "@/components/ui/blur-fade";
 import {
   Leaf,
@@ -239,24 +240,9 @@ const SustainabilityPage = () => {
           </div>
         </BlurFade>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
-          {communityPrograms.map((program, index) => (
-            <BlurFade key={index} delay={0.2 + index * 0.1} inView>
-              <div className="bg-gray-50 border border-gray-200 rounded-2xl p-6 hover:shadow-lg transition-shadow">
-                <h4 className="text-xl font-semibold mb-3 text-gray-900">
-                  {program.title}
-                </h4>
-                <p className="text-gray-700 text-sm leading-relaxed">
-                  {program.description}
-                </p>
-              </div>
-            </BlurFade>
-          ))}
-        </div>
-
         {/* Community Stats */}
-        <BlurFade delay={0.4} inView>
-          <div className="bg-gradient-to-br from-sky-50 to-blue-50 border border-sky-200 rounded-2xl p-8 md:p-12">
+        <BlurFade delay={0.2} inView>
+          <div className="bg-gradient-to-br from-sky-50 to-blue-50 border border-sky-200 rounded-2xl p-8 md:p-12 mb-16">
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
               {communityStats.map((stat, index) => (
                 <div key={index} className="text-center">
@@ -271,6 +257,132 @@ const SustainabilityPage = () => {
             </div>
           </div>
         </BlurFade>
+      </div>
+
+      {/* Actions in Practice - Double Component Design */}
+      <div className="mb-20">
+        <BlurFade delay={0.1} inView>
+          <div className="mb-12 text-center">
+            <h2 className="text-2xl font-semibold mb-3 tracking-tight text-gray-900">
+              Our Actions in Practice
+            </h2>
+            <h3 className="text-3xl font-semibold mb-4 tracking-tighter text-gray-900 md:text-4xl">
+              Driving Real Change
+            </h3>
+          </div>
+        </BlurFade>
+
+        <div className="grid gap-12 lg:gap-16">
+          {/* Action 1 & 2 */}
+          <div className="grid gap-6 lg:grid-cols-2">
+            <BlurFade delay={0.2} inView>
+              <div>
+                <p className="text-sky-600 font-medium mb-6 uppercase text-sm">
+                  Education & Empowerment
+                </p>
+                <h2 className="text-3xl font-semibold mb-6 tracking-tighter text-balance text-gray-900 md:text-4xl max-w-2xl">
+                  Building future leaders through education
+                </h2>
+                <p className="mb-6 text-gray-600 leading-relaxed">
+                  Our scholarship programs support promising students from host
+                  communities to pursue higher education in STEM fields. We've
+                  awarded over 50 scholarships and provided vocational training
+                  to thousands, creating pathways to meaningful careers in the
+                  energy sector and beyond.
+                </p>
+                <div className="relative h-80 w-full rounded-xl overflow-hidden shadow-lg">
+                  <Image
+                    src="/actions/1.jpg"
+                    alt="Education and scholarship programs"
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+              </div>
+            </BlurFade>
+
+            <BlurFade delay={0.3} inView>
+              <div>
+                <p className="text-sky-600 font-medium mb-6 uppercase text-sm">
+                  Healthcare & Wellbeing
+                </p>
+                <h2 className="text-3xl font-semibold mb-6 tracking-tighter text-balance text-gray-900 md:text-4xl max-w-2xl">
+                  Improving access to quality healthcare
+                </h2>
+                <p className="mb-6 text-gray-600 leading-relaxed">
+                  Through medical outreach programs and health facility
+                  improvements, we're making quality healthcare accessible to
+                  underserved communities. Our initiatives include mobile
+                  clinics, health education workshops, and support for local
+                  medical infrastructure.
+                </p>
+                <div className="relative h-80 w-full rounded-xl overflow-hidden shadow-lg">
+                  <Image
+                    src="/actions/2.webp"
+                    alt="Healthcare initiatives and medical outreach"
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+              </div>
+            </BlurFade>
+          </div>
+
+          {/* Action 3 & 4 */}
+          <div className="grid gap-6 lg:grid-cols-2">
+            <BlurFade delay={0.4} inView>
+              <div>
+                <p className="text-sky-600 font-medium mb-6 uppercase text-sm">
+                  Environmental Stewardship
+                </p>
+                <h2 className="text-3xl font-semibold mb-6 tracking-tighter text-balance text-gray-900 md:text-4xl max-w-2xl">
+                  Protecting our planet for future generations
+                </h2>
+                <p className="mb-6 text-gray-600 leading-relaxed">
+                  We're committed to minimizing our environmental footprint
+                  through comprehensive waste management, water conservation,
+                  and support for reforestation projects. Our initiatives
+                  protect biodiversity and restore natural habitats in the
+                  communities where we operate.
+                </p>
+                <div className="relative h-80 w-full rounded-xl overflow-hidden shadow-lg">
+                  <Image
+                    src="/actions/3.jpg"
+                    alt="Environmental conservation and reforestation"
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+              </div>
+            </BlurFade>
+
+            <BlurFade delay={0.5} inView>
+              <div>
+                <p className="text-sky-600 font-medium mb-6 uppercase text-sm">
+                  Infrastructure Development
+                </p>
+                <h2 className="text-3xl font-semibold mb-6 tracking-tighter text-balance text-gray-900 md:text-4xl max-w-2xl">
+                  Creating lasting community infrastructure
+                </h2>
+                <p className="mb-6 text-gray-600 leading-relaxed">
+                  From schools and water systems to roads and community
+                  facilities, we invest in infrastructure that serves as the
+                  foundation for thriving communities. Our projects create jobs,
+                  improve quality of life, and support long-term economic
+                  development.
+                </p>
+                <div className="relative h-80 w-full rounded-xl overflow-hidden shadow-lg">
+                  <Image
+                    src="/actions/4.jpeg"
+                    alt="Community infrastructure and development"
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+              </div>
+            </BlurFade>
+          </div>
+        </div>
       </div>
     </div>
   );
