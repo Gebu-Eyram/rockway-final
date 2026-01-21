@@ -52,9 +52,11 @@ const Header = () => {
         </nav>
 
         {/* Desktop Contact Button */}
-        <Button className="hidden md:block bg-foreground text-background px-6 py-2 rounded-full text-sm hover:bg-gray-800">
-          Get a Quote
-        </Button>
+        <Link href="/contact">
+          <Button className="hidden md:block bg-foreground text-background px-6 py-2 rounded-full text-sm hover:bg-gray-800">
+            Get a Quote
+          </Button>
+        </Link>
 
         {/* Mobile Menu */}
         <Sheet open={isOpen} onOpenChange={setIsOpen}>
@@ -84,9 +86,11 @@ const Header = () => {
               ))}
             </nav>
             <div className="mt-auto pb-8 px-2">
-              <Button className="w-full bg-foreground text-background px-6 py-2 rounded-full text-sm hover:bg-gray-800">
-                Get a Quote
-              </Button>
+              <Link href="/contact" className="block">
+                <Button className="w-full bg-foreground text-background px-6 py-2 rounded-full text-sm hover:bg-gray-800">
+                  Get a Quote
+                </Button>
+              </Link>
             </div>
           </SheetContent>
         </Sheet>

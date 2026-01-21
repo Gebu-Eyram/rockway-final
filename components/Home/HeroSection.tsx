@@ -5,6 +5,7 @@ import { BlogPosts } from "@/constants";
 import Image from "next/image";
 import Link from "next/link";
 import { BlurFade } from "@/components/ui/blur-fade";
+import { HeroVideoDialog } from "@/components/ui/hero-video-dialog";
 
 const HeroSection = () => {
   return (
@@ -45,15 +46,17 @@ const HeroSection = () => {
                     Explore Now
                     <ArrowRight className="w-5 h-5" />
                   </Button>
-                  <Button
-                    variant="outline"
-                    className="bg-transparent border-2 border-white text-white hover:bg-white/10 rounded-full px-6 py-6 text-base flex items-center gap-2"
-                  >
-                    <div className="w-6 h-6 bg-white rounded-full flex items-center justify-center">
-                      <Play className="w-3 h-3 text-black fill-black ml-0.5" />
-                    </div>
-                    Play Video
-                  </Button>
+                  <HeroVideoDialog videoSrc="https://www.youtube.com/embed/XbBLagPXWNk">
+                    <Button
+                      variant="outline"
+                      className="bg-transparent border-2 border-white text-white hover:bg-white/10 rounded-full px-6 py-6 text-base flex items-center gap-2"
+                    >
+                      <div className="w-6 h-6 bg-white rounded-full flex items-center justify-center">
+                        <Play className="w-3 h-3 text-black fill-black ml-0.5" />
+                      </div>
+                      Play Video
+                    </Button>
+                  </HeroVideoDialog>
                 </div>
               </BlurFade>
             </div>
