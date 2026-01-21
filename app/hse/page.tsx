@@ -14,13 +14,6 @@ import Link from "next/link";
 import { Button } from "@/components/ui/button";
 
 const HSEPage = () => {
-  const stats = [
-    { value: "5M+", label: "Safe Man-hours" },
-    { value: "0", label: "Lost Time Incidents (2023)" },
-    { value: "100%", label: "Safety Training Compliance" },
-    { value: "99.9%", label: "HSE Performance Rating" },
-  ];
-
   const commitments = [
     {
       icon: Shield,
@@ -72,39 +65,129 @@ const HSEPage = () => {
   return (
     <div className="font-sans">
       {/* Hero Section */}
-      <section className="bg-gray-50 py-16 md:py-24">
-        <div className="mx-auto max-w-7xl px-6">
-          <BlurFade delay={0.1}>
-            <div className="max-w-3xl">
-              <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6 tracking-tight">
-                Health, Safety & Environment
-              </h1>
-              <p className="text-lg md:text-xl text-gray-600">
-                Safety is not just a priority at Rockway—it's a core value
-                embedded in everything we do.
-              </p>
-            </div>
-          </BlurFade>
-        </div>
-      </section>
-
-      {/* Statistics Section */}
-      <section className="py-16 md:py-24 border-t">
-        <div className="mx-auto max-w-7xl px-6">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            {stats.map((stat, index) => (
-              <BlurFade key={index} delay={0.2 + index * 0.1} inView>
-                <div className="text-center">
-                  <div className="text-4xl md:text-5xl font-bold text-gray-900 mb-2">
-                    {stat.value}
-                  </div>
-                  <div className="text-sm md:text-base text-gray-600">
-                    {stat.label}
+      <section>
+        <div className="py-8 lg:pt-24">
+          <div className="mx-auto w-full max-w-7xl px-4">
+            <div className="flex max-md:flex-col items-center gap-4">
+              <BlurFade delay={0.2}>
+                <h2 className="text-3xl font-semibold tracking-tighter text-balance text-gray-900 md:text-4xl max-w-2xl">
+                  Health, Safety & Environment - Our Commitment to Zero Harm
+                </h2>
+              </BlurFade>
+              <BlurFade delay={0.4}>
+                <div>
+                  <p className="max-w-xl">
+                    Safety is not just a priority at Rockway—it's a core value
+                    embedded in everything we do. We are committed to protecting
+                    our people, the environment, and maintaining operational
+                    excellence.
+                  </p>
+                  <div className="mt-4">
+                    <Button variant="outline" className="mr-2">
+                      HSE Policy
+                    </Button>
+                    <Button className="bg-sky-700 hover:bg-sky-600">
+                      Contact Us
+                    </Button>
                   </div>
                 </div>
               </BlurFade>
-            ))}
+            </div>
+
+            <BlurFade delay={0.6}>
+              <div className="w-full h-[500px] border my-12 relative rounded-2xl overflow-hidden">
+                <Image
+                  src="/hse.jpg"
+                  alt="Health Safety and Environment"
+                  fill
+                  className="w-full absolute object-cover"
+                />
+                {/* Stats Card Overlay */}
+                <div className="absolute bottom-8 left-8 right-8">
+                  <div className="bg-white/80 backdrop-blur rounded-4xl shadow-lg p-6 md:p-8">
+                    <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8">
+                      <div>
+                        <div className="text-4xl md:text-5xl mb-2 text-gray-900">
+                          5M+
+                        </div>
+                        <div className="text-sm md:text-base text-gray-600">
+                          Safe Man-hours
+                        </div>
+                      </div>
+                      <div>
+                        <div className="text-4xl md:text-5xl mb-2 text-gray-900">
+                          0
+                        </div>
+                        <div className="text-sm md:text-base text-gray-600">
+                          Lost Time Incidents (2023)
+                        </div>
+                      </div>
+                      <div>
+                        <div className="text-4xl md:text-5xl mb-2 text-gray-900">
+                          100%
+                        </div>
+                        <div className="text-sm md:text-base text-gray-600">
+                          Safety Training Compliance
+                        </div>
+                      </div>
+                      <div>
+                        <div className="text-4xl md:text-5xl mb-2 text-gray-900">
+                          99.9%
+                        </div>
+                        <div className="text-sm md:text-base text-gray-600">
+                          HSE Performance Rating
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </BlurFade>
           </div>
+        </div>
+      </section>
+
+      {/* HSE Excellence Section */}
+      <section className="py-16 md:py-24">
+        <div className="w-full inter mx-auto px-4 max-w-7xl grid lg:grid-cols-2 gap-6">
+          <BlurFade delay={0.1} inView>
+            <div className="bg-muted/20 flex flex-col items-start justify-center rounded-3xl p-6 md:p-8">
+              <h2 className="text-3xl font-semibold mb-6 tracking-tighter text-balance text-gray-900 md:text-4xl inter">
+                Delivering Excellence with Safety at Our Core
+              </h2>
+              <Link href="/contact" className="mb-6">
+                <button className="bg-sky-600 text-background py-4 px-6 rounded-full text-sm hover:bg-sky-700 transition-colors">
+                  Our HSE Commitment
+                </button>
+              </Link>
+              <p className="text-muted-foreground">
+                <span className="font-medium text-foreground">
+                  Proactive safety measures{" "}
+                </span>
+                ensure that every project is executed with the highest regard
+                for personnel safety, environmental protection, and regulatory
+                compliance.
+              </p>
+              <p className="text-muted-foreground mt-6">
+                <span className="font-medium text-foreground">
+                  Continuous improvement{" "}
+                </span>
+                through regular audits, training programs, and safety
+                innovations keeps our HSE standards at the forefront of industry
+                best practices.
+              </p>
+            </div>
+          </BlurFade>
+          <BlurFade delay={0.2} inView>
+            <div className="h-full min-h-[400px] bg-muted rounded-3xl relative overflow-hidden">
+              <Image
+                src="/hse-2.jpg"
+                alt="HSE Excellence"
+                fill
+                className="w-full absolute object-cover"
+              />
+            </div>
+          </BlurFade>
         </div>
       </section>
 
