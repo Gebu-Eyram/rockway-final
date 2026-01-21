@@ -57,7 +57,8 @@ export const BlogPosts = [
 export const JobOpenings = [
   {
     title: "Product Designer",
-    description: "We're looking for a mid-level product designer to join our team.",
+    description:
+      "We're looking for a mid-level product designer to join our team.",
     department: "Design",
     slug: "product-designer",
     remote: true,
@@ -65,7 +66,8 @@ export const JobOpenings = [
   },
   {
     title: "Engineering Manager",
-    description: "We're looking for an experienced engineering manager to join our team.",
+    description:
+      "We're looking for an experienced engineering manager to join our team.",
     department: "Development",
     slug: "engineering-manager",
     remote: true,
@@ -73,7 +75,8 @@ export const JobOpenings = [
   },
   {
     title: "Customer Success Manager",
-    description: "We're looking for a customer success manager to join our team.",
+    description:
+      "We're looking for a customer success manager to join our team.",
     department: "Customer Service",
     slug: "customer-success-manager",
     remote: true,
@@ -89,7 +92,8 @@ export const JobOpenings = [
   },
   {
     title: "SEO Marketing Manager",
-    description: "We're looking for an experienced SEO marketing manager to join our team.",
+    description:
+      "We're looking for an experienced SEO marketing manager to join our team.",
     department: "Marketing",
     slug: "seo-marketing-manager",
     remote: true,

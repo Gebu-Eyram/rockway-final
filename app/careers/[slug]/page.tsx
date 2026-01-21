@@ -80,8 +80,8 @@ const JobApplicationPage = () => {
             Application Submitted!
           </h1>
           <p className="text-lg text-gray-600 mb-8">
-            Thank you for your interest in the {job.title} position. We&apos;ll review
-            your application and get back to you soon.
+            Thank you for your interest in the {job.title} position. We&apos;ll
+            review your application and get back to you soon.
           </p>
           <div className="flex gap-4 justify-center">
             <Link href="/careers">
