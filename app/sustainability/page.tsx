@@ -2,7 +2,15 @@
 
 import React from "react";
 import { BlurFade } from "@/components/ui/blur-fade";
-import { Leaf, Users, Shield, Sun, Recycle, Droplets, Trees } from "lucide-react";
+import {
+  Leaf,
+  Users,
+  Shield,
+  Sun,
+  Recycle,
+  Droplets,
+  Trees,
+} from "lucide-react";
 
 const SustainabilityPage = () => {
   const esgPillars = [
@@ -224,8 +232,9 @@ const SustainabilityPage = () => {
               Community Development
             </h3>
             <p className="text-gray-600 max-w-3xl">
-              We believe in shared prosperity. Our community development programs
-              create lasting positive impact in the regions where we operate.
+              We believe in shared prosperity. Our community development
+              programs create lasting positive impact in the regions where we
+              operate.
             </p>
           </div>
         </BlurFade>
