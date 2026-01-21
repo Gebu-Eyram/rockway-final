@@ -59,7 +59,7 @@ const JobApplicationPage = () => {
 
   if (submitted) {
     return (
-      <div className="max-w-4xl mx-auto py-20 px-4 text-center">
+      <div className="max-w-4xl mx-auto inter py-20 px-4 text-center">
         <div className="mb-6">
           <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
             <svg
