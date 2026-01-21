@@ -53,3 +53,46 @@ export const BlogPosts = [
     content: `Remotely Operated Vehicles (ROVs) have become indispensable tools in the maintenance of subsea valves, playing a crucial role in ensuring the safety and efficiency of offshore oil and gas operations. These sophisticated underwater robots are equipped with high-resolution cameras and specialized tools that allow operators to perform inspections, repairs, and maintenance tasks without the need for human divers. ROVs can access deepwater environments and navigate complex subsea structures, providing real-time data and visual feedback to surface teams. This capability not only enhances safety by reducing the risks associated with human intervention but also improves operational efficiency by enabling quicker response times to potential issues. As the demand for offshore energy resources continues to grow, the use of ROVs in subsea valve maintenance is set to expand, driving advancements in technology and operational practices within the industry.`,
   },
 ];
+
+export const JobOpenings = [
+  {
+    title: "Product Designer",
+    description: "We're looking for a mid-level product designer to join our team.",
+    department: "Design",
+    slug: "product-designer",
+    remote: true,
+    type: "Full-time",
+  },
+  {
+    title: "Engineering Manager",
+    description: "We're looking for an experienced engineering manager to join our team.",
+    department: "Development",
+    slug: "engineering-manager",
+    remote: true,
+    type: "Full-time",
+  },
+  {
+    title: "Customer Success Manager",
+    description: "We're looking for a customer success manager to join our team.",
+    department: "Customer Service",
+    slug: "customer-success-manager",
+    remote: true,
+    type: "Full-time",
+  },
+  {
+    title: "Account Executive",
+    description: "We're looking for an account executive to join our team.",
+    department: "Management",
+    slug: "account-executive",
+    remote: true,
+    type: "Full-time",
+  },
+  {
+    title: "SEO Marketing Manager",
+    description: "We're looking for an experienced SEO marketing manager to join our team.",
+    department: "Marketing",
+    slug: "seo-marketing-manager",
+    remote: true,
+    type: "Full-time",
+  },
+];
